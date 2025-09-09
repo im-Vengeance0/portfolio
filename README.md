@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+# Himanshu Raj – Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React portfolio showcasing Himanshu's web design and development work.  
+The site features a clean UI, smooth scrolling navigation, and a contact form powered by **EmailJS**.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Responsive Design** – Works on desktop, tablet, and mobile.
+- **Smooth Scrolling** – Implemented with `react-scroll`.
+- **Contact Form** – Sends emails directly via EmailJS (no backend required).
+- **Animated Navigation** – Desktop and mobile menu variants.
+- **Showcase Section** – Portfolio images displayed in a flexible grid.
+- **Skills Section** – Highlights UI/UX, website, and app design expertise.
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Technology | Version |
+|------------|---------|
+| React      | 19.1.0 |
+| React‑DOM  | 19.1.0 |
+| React‑Scripts | 5.0.1 |
+| EmailJS (`@emailjs/browser`) | ^4.4.1 |
+| React‑Scroll | ^1.9.3 |
+| Testing Library (jest, dom, user‑event) | ^10.4.0 / ^6.6.3 / ^16.3.0 |
+| CSS (custom) | – |
+| Vercel (deployment) | – |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Node.js** (>= 18.x) and **npm** (or Yarn) installed.
+- An **EmailJS** account (for the contact form). Replace the service/template IDs in `src/components/Contact/contact.js` with your own.
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clone the repository
+git clone https://github.com/im-Vengeance0/portfolio.git
+cd portfolio
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+npm install
+# or with yarn
+# yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Development
 
-### `npm run eject`
+```bash
+npm start
+# or
+# yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open <http://localhost:3000> in your browser. The app will auto‑reload as you edit source files.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run build
+# or
+# yarn build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The optimized production build will be output to the `build/` folder.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The project includes a `vercel.json` that rewrites all routes to `index.html`, making it ready for Vercel hosting:
 
-### `npm run build` fails to minify
+```bash
+# Deploy with the Vercel CLI
+vercel --prod
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> **Tip:** If you’re using another static‑site host (Netlify, GitHub Pages, etc.), simply serve the contents of the `build/` directory.
+
+## 📂 Project Structure
+
+```
+portfolio/
+├── .gitignore
+├── README.md          ← (this file)
+├── package.json
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── style.css
+├── src/
+│   ├── App.js
+│   ├── assets/        ← images & icons
+│   ├── components/
+│   │   ├── Contact/
+│   │   │   ├── contact.js
+│   │   │   └── contact.css
+│   │   ├── Footer/
+│   │   │   ├── footer.js
+│   │   │   └── footer.css
+│   │   ├── Intro/
+│   │   │   ├── intro.js
+│   │   │   └── intro.css
+│   │   ├── NavBar/
+│   │   │   ├── NavBar.js
+│   │   │   └── NavBar.css
+│   │   ├── Skills/
+│   │   │   ├── skills.js
+│   │   │   └── skills.css
+│   │   └── Works/
+│   │       ├── works.js
+│   │       └── works.css
+│   └── index.js
+└── vercel.json
+```
+
+## 📧 Contact Form Setup
+
+The contact component uses EmailJS:
+
+```js
+emailjs.sendForm(
+  'service_w6e5s89',      // replace with your EmailJS service ID
+  'template_yri6pra',     // replace with your EmailJS template ID
+  form.current,
+  { publicKey: 'qoG_aLtK7aaZSkFm9' } // replace with your public key
+)
+```
+
+1. Sign up at <https://www.emailjs.com/>.
+2. Create a **service**, **template**, and obtain the **public key**.
+3. Update the values in `src/components/Contact/contact.js`.
+
+## 🎨 Customization
+
+- **Images:** Replace any file in `src/assets/` with your own graphics (logo, portfolio screenshots, client logos, etc.).
+- **Colors & Fonts:** Edit `public/style.css` or component‑specific CSS files.
+- **Content:** Update text in each component (`Intro`, `Skills`, `Works`, `Contact`, `Footer`) to reflect your own experience and branding.
+
+## 📄 License
+
+This project is open source and free to use. Feel free to fork, modify, and deploy it as your own portfolio.
+
+---
+
+*Built with ❤️ by Himanshu Raj – 2025*  
