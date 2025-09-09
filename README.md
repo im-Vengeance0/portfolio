@@ -143,4 +143,4 @@ This project is open source and free to use. Feel free to fork, modify, and depl
 
 ---
 
-*Built with ❤️ by Himanshu Raj – 2025*  
+*Built with ❤️ by Himanshu Raj *  
